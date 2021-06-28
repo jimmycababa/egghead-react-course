@@ -4,16 +4,20 @@
     <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
     <!-- react for rendering the elements -->
     <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
-    <script type="text/javascript">
+    <!-- installing babel so we can write JS code without turining it into JSX -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script type="text/babel">
     // getting access to the "root" div
     const rootElement = document.getElementById('root')
     // we specify the first type of element as an argument, but instead of getting the element and attaching properties to it, we will specify those properties upon creation as an object.
     // will render this element with reactDOM that is below and send it to the rootElement
-    const element = React.createElement('div', {
-        // children and className are the props
-        children: 'Hello World',
-        className: 'container'
-    })
+    // const element = React.createElement('div', {
+    //     // children and className are the props
+    //     children: 'Hello World',
+    //     className: 'container'
+    // })
+
+    const element = <div className="container">Hello World</div>
     ReactDOM.render(element, rootElement)
     // creating the element for the appendChild
     // const element = document.createElement('div')
